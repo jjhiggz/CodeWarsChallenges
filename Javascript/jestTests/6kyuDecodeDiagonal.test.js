@@ -1,4 +1,4 @@
-const decodeDiagonal = require('../6kyuDecodeDiagonal.js')
+const decodeDiagonal = require('../6kyu/6kyuDecodeDiagonal.js')
 var grid = ( 
   "C \n" +
   "D o F C A E A s ! \n" +
