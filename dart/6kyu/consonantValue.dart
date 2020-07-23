@@ -46,15 +46,18 @@ int solve(String s) {
     "z": 26,
   };
   return s
-  .split(new RegExp("a|e|i|o|u")) // split s by a e i o or u
-  .where((string) => string != '')
-  .toList() //get rid of blank strings
-  .map((substring) => substring
-    .split('') // make a list of lists, where each term is an array representing the split substring
-    .map((char) => letterValue[char])
-    .toList() // turn each substring split array into an array of their equivalent numbers
-    .reduce((value, num) =>  value +/*  */ num) // get the sum of each substring array
-  )
-  .toList()
-  .reduce((value, num) => num > value ? num : value); // get the max from the return
+      .split(new RegExp("a|e|i|o|u")) // split s by a e i o or u
+      .where((string) => string != '')
+      .toList() //get rid of blank strings
+      .map((substring) => substring
+              .split(
+                  '') // make a list of lists, where each term is an array representing the split substring
+              .map((char) => letterValue[char])
+              .toList() // turn each substring split array into an array of their equivalent numbers
+              .reduce((value, num) =>
+                  value + /*  */ num) // get the sum of each substring array
+          )
+      .toList()
+      .reduce((value, num) =>
+          num > value ? num : value); // get the max from the return
 }
