@@ -10,8 +10,8 @@
 
 
 # My solution
-def abbrev_name(name)
-  name.split(' ').map do |word|
+def abbrev_name(namee)
+  namee.split(' ').map do |word|
     word[0].upcase
   end .join('.')
 end
